@@ -1,0 +1,50 @@
+{
+    "manifest_version": 3,
+    "name": "Argo CD JSON Pretty Logs",
+    "version": "0.1.0",
+    "description": "Colorizes and prettifies JSON-formatted logs in the Argo CD UI",
+    "content_scripts": [
+        {
+            "matches": [
+                "https://*/applications/*",
+                "https://*/applications?*",
+                "https://*/applications/*/events*",
+                "https://*/applications/*/logs*",
+                "https://*/applications/*/pods*",
+                "https://*/applications/*/workflows*",
+                "https://*/applications/*/*"
+            ],
+            "js": [
+                "dist/content.js"
+            ],
+            "css": [
+                "styles/content.css"
+            ],
+            "run_at": "document_idle"
+        }
+    ],
+    "background": {
+        "service_worker": "dist/background.js",
+        "type": "module"
+    },
+    "action": {
+        "default_title": "Argo JSON Pretty Logs"
+    },
+    "host_permissions": [
+        "https://*/"
+    ],
+    "permissions": [
+        "storage",
+        "contextMenus"
+    ],
+    "web_accessible_resources": [
+        {
+            "resources": [
+                "styles/content.css"
+            ],
+            "matches": [
+                "<all_urls>"
+            ]
+        }
+    ]
+}

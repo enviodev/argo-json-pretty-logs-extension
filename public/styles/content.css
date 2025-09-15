@@ -1,0 +1,30 @@
+.argo-json-pretty {
+  font-family: ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas,
+    "Liberation Mono", "Courier New", monospace;
+  margin: 0;
+}
+.argo-json-token.argo-json-punctuation {
+  color: #9aa4b2;
+}
+.argo-json-token.argo-json-key {
+  color: #4f46e5;
+}
+.argo-json-token.argo-json-string {
+  color: #059669;
+}
+.argo-json-token.argo-json-number {
+  color: #d97706;
+}
+.argo-json-token.argo-json-boolean {
+  color: #2563eb;
+}
+.argo-json-token.argo-json-null {
+  color: #6b7280;
+  font-style: italic;
+}
+.argo-json-container {
+  background: rgba(0, 0, 0, 0.03);
+  padding: 2px 8px;
+  border-radius: 4px;
+  overflow-x: auto;
+}
