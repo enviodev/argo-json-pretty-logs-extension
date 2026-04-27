@@ -11,10 +11,10 @@ Colorizes and prettifies JSON-formatted log lines in the Argo CD UI. It finds lo
 
 ### Folder layout
 
-- `public/manifest.json` — MV3 manifest
-- `src/content.ts` — content script (TypeScript)
-- `public/styles/content.css` — token colors and base styling
-- `public/dist/content.js` — built bundle (generated)
+- `public/manifest.json`: MV3 manifest
+- `src/content.ts`: content script (TypeScript)
+- `public/styles/content.css`: token colors and base styling
+- `public/dist/content.js`: built bundle (generated)
 
 ### Build
 
